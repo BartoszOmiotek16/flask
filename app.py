@@ -4,7 +4,7 @@ from flask import Flask, request, render_template, send_file
 from google_scraper import google_search, fetch_metadata
 
 app = Flask(__name__)
-
+app.debug = True
 @app.route('/')
 def index():
     return render_template('index.html')
